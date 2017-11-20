@@ -1,0 +1,131 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: _01_rawData/hcc1395_tumor_rep2_r2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.4
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; user defined)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 3 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: --extract --quiet
+Output file will be GZIP compressed
+
+
+This is cutadapt 1.14 with Python 2.7.13
+Command line parameters: -f fastq -e 0.1 -q 20 -O 3 -a AGATCGGAAGAGC _01_rawData/hcc1395_tumor_rep2_r2.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 4.04 s (10 us/read; 5.80 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 390,607
+Reads with adapters:                   107,563 (27.5%)
+Reads written (passing filters):       390,607 (100.0%)
+
+Total basepairs processed:    58,981,657 bp
+Quality-trimmed:                 866,560 bp (1.5%)
+Total written (filtered):     56,601,236 bp (96.0%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 107563 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 8.8%
+  C: 47.8%
+  G: 34.9%
+  T: 8.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	11490	6103.2	0	11490
+4	5569	1525.8	0	5569
+5	4232	381.5	0	4232
+6	4526	95.4	0	4526
+7	3570	23.8	0	3570
+8	4062	6.0	0	4062
+9	4145	1.5	0	4138 7
+10	3962	0.4	1	3550 412
+11	4110	0.1	1	3703 407
+12	4705	0.0	1	4219 486
+13	4337	0.0	1	3851 486
+14	5218	0.0	1	4687 531
+15	3424	0.0	1	3075 349
+16	3285	0.0	1	2947 338
+17	4167	0.0	1	3774 393
+18	2864	0.0	1	2599 265
+19	3398	0.0	1	3071 327
+20	2908	0.0	1	2654 254
+21	2998	0.0	1	2738 260
+22	3200	0.0	1	2887 313
+23	3505	0.0	1	3158 347
+24	3015	0.0	1	2729 286
+25	2951	0.0	1	2666 285
+26	2909	0.0	1	2688 221
+27	2794	0.0	1	2580 214
+28	2570	0.0	1	2343 227
+29	2361	0.0	1	2192 169
+30	923	0.0	1	830 93
+31	218	0.0	1	204 14
+32	77	0.0	1	70 7
+33	7	0.0	1	4 3
+34	4	0.0	1	4
+35	1	0.0	1	0 1
+36	1	0.0	1	0 1
+37	1	0.0	1	0 1
+40	1	0.0	1	0 1
+41	2	0.0	1	0 2
+51	1	0.0	1	0 1
+59	2	0.0	1	0 2
+60	1	0.0	1	0 1
+62	2	0.0	1	0 2
+68	4	0.0	1	0 4
+69	2	0.0	1	0 2
+70	1	0.0	1	0 1
+75	2	0.0	1	0 2
+76	2	0.0	1	0 2
+80	1	0.0	1	0 1
+82	1	0.0	1	0 1
+83	1	0.0	1	0 1
+85	2	0.0	1	0 2
+90	2	0.0	1	0 2
+92	1	0.0	1	0 1
+93	1	0.0	1	0 1
+94	1	0.0	1	0 1
+100	1	0.0	1	0 1
+103	1	0.0	1	0 1
+104	1	0.0	1	0 1
+105	2	0.0	1	0 2
+106	3	0.0	1	0 3
+108	1	0.0	1	0 1
+109	1	0.0	1	0 1
+111	3	0.0	1	0 3
+112	1	0.0	1	0 1
+122	1	0.0	1	0 1
+126	1	0.0	1	0 1
+127	2	0.0	1	0 2
+135	1	0.0	1	0 1
+138	1	0.0	1	0 1
+139	1	0.0	1	0 1
+140	1	0.0	1	0 1
+142	2	0.0	1	0 2
+144	1	0.0	1	0 1
+146	1	0.0	1	0 1
+
+
+RUN STATISTICS FOR INPUT FILE: _01_rawData/hcc1395_tumor_rep2_r2.fastq.gz
+=============================================
+390607 sequences processed in total
+
+Total number of sequences analysed for the sequence pair length validation: 390607
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 549 (0.14%)

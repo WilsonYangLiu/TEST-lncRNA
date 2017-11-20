@@ -1,0 +1,12 @@
+PASS	Basic Statistics	hcc1395_tumor_rep1_r1_val_1.fq.gz
+PASS	Per base sequence quality	hcc1395_tumor_rep1_r1_val_1.fq.gz
+PASS	Per tile sequence quality	hcc1395_tumor_rep1_r1_val_1.fq.gz
+PASS	Per sequence quality scores	hcc1395_tumor_rep1_r1_val_1.fq.gz
+FAIL	Per base sequence content	hcc1395_tumor_rep1_r1_val_1.fq.gz
+PASS	Per sequence GC content	hcc1395_tumor_rep1_r1_val_1.fq.gz
+PASS	Per base N content	hcc1395_tumor_rep1_r1_val_1.fq.gz
+WARN	Sequence Length Distribution	hcc1395_tumor_rep1_r1_val_1.fq.gz
+WARN	Sequence Duplication Levels	hcc1395_tumor_rep1_r1_val_1.fq.gz
+WARN	Overrepresented sequences	hcc1395_tumor_rep1_r1_val_1.fq.gz
+PASS	Adapter Content	hcc1395_tumor_rep1_r1_val_1.fq.gz
+FAIL	Kmer Content	hcc1395_tumor_rep1_r1_val_1.fq.gz

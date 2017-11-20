@@ -1,0 +1,114 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: _01_rawData/hcc1395_normal_rep1_r1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.4
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; user defined)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 3 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: --extract --quiet
+Output file will be GZIP compressed
+
+
+This is cutadapt 1.14 with Python 2.7.13
+Command line parameters: -f fastq -e 0.1 -q 20 -O 3 -a AGATCGGAAGAGC _01_rawData/hcc1395_normal_rep1_r1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 3.37 s (10 us/read; 5.92 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 331,958
+Reads with adapters:                    73,101 (22.0%)
+Reads written (passing filters):       331,958 (100.0%)
+
+Total basepairs processed:    50,125,658 bp
+Quality-trimmed:                 112,074 bp (0.2%)
+Total written (filtered):     48,983,230 bp (97.7%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 73101 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 11.3%
+  C: 41.9%
+  G: 30.7%
+  T: 16.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	7394	5186.8	0	7394
+4	3991	1296.7	0	3991
+5	3044	324.2	0	3044
+6	2945	81.0	0	2945
+7	2962	20.3	0	2962
+8	2715	5.1	0	2715
+9	2662	1.3	0	2652 10
+10	2823	0.3	1	2622 201
+11	2668	0.1	1	2447 221
+12	2970	0.0	1	2722 248
+13	2633	0.0	1	2454 179
+14	2839	0.0	1	2637 202
+15	2526	0.0	1	2320 206
+16	2679	0.0	1	2471 208
+17	2545	0.0	1	2364 181
+18	2520	0.0	1	2327 193
+19	2479	0.0	1	2279 200
+20	2223	0.0	1	2073 150
+21	2240	0.0	1	2109 131
+22	2088	0.0	1	1943 145
+23	2144	0.0	1	2019 125
+24	2163	0.0	1	2027 136
+25	1950	0.0	1	1843 107
+26	1963	0.0	1	1856 107
+27	1823	0.0	1	1703 120
+28	1654	0.0	1	1548 106
+29	1519	0.0	1	1431 88
+30	626	0.0	1	562 64
+31	217	0.0	1	191 26
+32	47	0.0	1	41 6
+33	11	0.0	1	6 5
+44	1	0.0	1	0 1
+48	1	0.0	1	0 1
+51	2	0.0	1	0 2
+60	1	0.0	1	0 1
+62	2	0.0	1	0 2
+63	1	0.0	1	0 1
+64	1	0.0	1	0 1
+71	1	0.0	1	0 1
+76	1	0.0	1	0 1
+83	2	0.0	1	0 2
+86	1	0.0	1	0 1
+89	1	0.0	1	0 1
+90	1	0.0	1	0 1
+98	2	0.0	1	0 2
+100	1	0.0	1	0 1
+101	2	0.0	1	0 2
+114	1	0.0	1	0 1
+120	2	0.0	1	0 2
+123	2	0.0	1	0 2
+126	1	0.0	1	0 1
+127	1	0.0	1	0 1
+128	1	0.0	1	0 1
+134	1	0.0	1	0 1
+135	2	0.0	1	0 2
+138	2	0.0	1	0 2
+145	2	0.0	1	0 2
+147	1	0.0	1	0 1
+148	1	0.0	1	0 1
+
+
+RUN STATISTICS FOR INPUT FILE: _01_rawData/hcc1395_normal_rep1_r1.fastq.gz
+=============================================
+331958 sequences processed in total
+

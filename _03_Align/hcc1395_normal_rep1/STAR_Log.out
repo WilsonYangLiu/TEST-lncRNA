@@ -1,0 +1,599 @@
+STAR version=STAR_2.5.3a
+STAR compilation time,server,dir=Fri Mar 17 11:35:46 EDT 2017 florence.cshl.edu:/sonas-hs/gingeras/nlsas_norepl/user/dobin/STAR/STAR.sandbox/source
+##### DEFAULT parameters:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           alignReads
+runThreadN                        1
+runDirPerm                        User_RWX
+runRNGseed                        777
+genomeDir                         ./GenomeDir/
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  -   
+genomeChainFiles                  -   
+genomeSAindexNbases               14
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+genomeSuffixLengthMax             18446744073709551615
+genomeFileSizes                   0   
+readFilesIn                       Read1   Read2   
+readFilesCommand                  -   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+readNameSeparator                 /   
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outTmpDir                         -
+outTmpKeep                        None
+outReadsUnmapped                  None
+outQSconversionAdd                0
+outMultimapperOrder               Old_2.4
+outSAMtype                        SAM   
+outSAMmode                        Full
+outSAMstrandField                 None
+outSAMattributes                  Standard   
+outSAMunmapped                    None   
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSAMfilter                      None   
+outSAMmultNmax                    18446744073709551615
+outSAMattrIHstart                 1
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     Normal
+outFilterMultimapNmax             10
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0.66
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0.66
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             None
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+winReadCoverageRelativeMin        0.5
+winReadCoverageBasesMin           0
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+alignIntronMin                    21
+alignIntronMax                    0
+alignMatesGapMax                  0
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                5
+alignSJDBoverhangMin              3
+alignSJstitchMismatchNmax         0   -1   0   0   
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+alignEndsProtrude                 0   ConcordantPair   
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimMainSegmentMultNmax           10
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold   
+chimFilter                        banGenomicN   
+chimSegmentReadGapMax             0
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       -
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         2
+sjdbInsertSave                    Basic
+quantMode                         -   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       None
+##### Command Line:
+STAR --readFilesIn _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz --outFileNamePrefix _03_Align/hcc1395_normal_rep1/STAR_ --runThreadN 2 --genomeDir genome/referenceFile/ --sjdbGTFfile genome/chr22_with_ERCC92.gtf --genomeLoad NoSharedMemory --outFilterType BySJout --outSAMstrandField intronMotif --outSAMattributes NH HI AS nM NM MD XS --twopassMode Basic --quantMode GeneCounts --outStd Log --outFilterIntronMotifs RemoveNoncanonical --readFilesCommand zcat --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --outFilterMultimapNmax 20 --outFilterMismatchNmax 10 --outFilterMultimapScoreRange 1 --sjdbScore 2 --sjdbOverhang 100 --outFilterMatchNminOverLread 0.3 --outFilterScoreMinOverLread 0.33 --alignSJDBoverhangMin 1 --alignMatesGapMax 1000000 --alignIntronMax 500000
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 _03_Align/hcc1395_normal_rep1/STAR_
+outStd                            Log
+###### All USER parameters from Command Line:
+readFilesIn                   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz        ~RE-DEFINED
+outFileNamePrefix             _03_Align/hcc1395_normal_rep1/STAR_     ~RE-DEFINED
+runThreadN                    2     ~RE-DEFINED
+genomeDir                     genome/referenceFile/     ~RE-DEFINED
+sjdbGTFfile                   genome/chr22_with_ERCC92.gtf     ~RE-DEFINED
+genomeLoad                    NoSharedMemory     ~RE-DEFINED
+outFilterType                 BySJout     ~RE-DEFINED
+outSAMstrandField             intronMotif     ~RE-DEFINED
+outSAMattributes              NH   HI   AS   nM   NM   MD   XS        ~RE-DEFINED
+twopassMode                   Basic     ~RE-DEFINED
+quantMode                     GeneCounts        ~RE-DEFINED
+outStd                        Log     ~RE-DEFINED
+outFilterIntronMotifs         RemoveNoncanonical     ~RE-DEFINED
+readFilesCommand              zcat        ~RE-DEFINED
+outReadsUnmapped              Fastx     ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+outFilterMultimapNmax         20     ~RE-DEFINED
+outFilterMismatchNmax         10     ~RE-DEFINED
+outFilterMultimapScoreRange   1     ~RE-DEFINED
+sjdbScore                     2     ~RE-DEFINED
+sjdbOverhang                  100     ~RE-DEFINED
+outFilterMatchNminOverLread   0.3     ~RE-DEFINED
+outFilterScoreMinOverLread    0.33     ~RE-DEFINED
+alignSJDBoverhangMin          1     ~RE-DEFINED
+alignMatesGapMax              1000000     ~RE-DEFINED
+alignIntronMax                500000     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        2
+genomeDir                         genome/referenceFile/
+genomeLoad                        NoSharedMemory
+readFilesIn                       _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz   
+readFilesCommand                  zcat   
+outFileNamePrefix                 _03_Align/hcc1395_normal_rep1/STAR_
+outStd                            Log
+outReadsUnmapped                  Fastx
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMstrandField                 intronMotif
+outSAMattributes                  NH   HI   AS   nM   NM   MD   XS   
+outFilterType                     BySJout
+outFilterMultimapNmax             20
+outFilterMultimapScoreRange       1
+outFilterScoreMinOverLread        0.33
+outFilterMatchNminOverLread       0.3
+outFilterMismatchNmax             10
+outFilterIntronMotifs             RemoveNoncanonical
+alignIntronMax                    500000
+alignMatesGapMax                  1000000
+alignSJDBoverhangMin              1
+sjdbGTFfile                       genome/chr22_with_ERCC92.gtf
+sjdbOverhang                      100
+sjdbScore                         2
+quantMode                         GeneCounts   
+twopassMode                       Basic
+
+-------------------------------
+##### Final effective command line:
+STAR   --runThreadN 2   --genomeDir genome/referenceFile/   --genomeLoad NoSharedMemory   --readFilesIn _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz      --readFilesCommand zcat      --outFileNamePrefix _03_Align/hcc1395_normal_rep1/STAR_   --outStd Log   --outReadsUnmapped Fastx   --outSAMtype BAM   SortedByCoordinate      --outSAMstrandField intronMotif   --outSAMattributes NH   HI   AS   nM   NM   MD   XS      --outFilterType BySJout   --outFilterMultimapNmax 20   --outFilterMultimapScoreRange 1   --outFilterScoreMinOverLread 0.33   --outFilterMatchNminOverLread 0.3   --outFilterMismatchNmax 10   --outFilterIntronMotifs RemoveNoncanonical   --alignIntronMax 500000   --alignMatesGapMax 1000000   --alignSJDBoverhangMin 1   --sjdbGTFfile genome/chr22_with_ERCC92.gtf   --sjdbOverhang 100   --sjdbScore 2   --quantMode GeneCounts      --twopassMode Basic
+
+##### Final parameters after user input--------------------------------:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           alignReads
+runThreadN                        2
+runDirPerm                        User_RWX
+runRNGseed                        777
+genomeDir                         genome/referenceFile/
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  -   
+genomeChainFiles                  -   
+genomeSAindexNbases               14
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+genomeSuffixLengthMax             18446744073709551615
+genomeFileSizes                   0   
+readFilesIn                       _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz   
+readFilesCommand                  zcat   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+readNameSeparator                 /   
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outFileNamePrefix                 _03_Align/hcc1395_normal_rep1/STAR_
+outTmpDir                         -
+outTmpKeep                        None
+outStd                            Log
+outReadsUnmapped                  Fastx
+outQSconversionAdd                0
+outMultimapperOrder               Old_2.4
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMmode                        Full
+outSAMstrandField                 intronMotif
+outSAMattributes                  NH   HI   AS   nM   NM   MD   XS   
+outSAMunmapped                    None   
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSAMfilter                      None   
+outSAMmultNmax                    18446744073709551615
+outSAMattrIHstart                 1
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     BySJout
+outFilterMultimapNmax             20
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0.33
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0.3
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             RemoveNoncanonical
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+winReadCoverageRelativeMin        0.5
+winReadCoverageBasesMin           0
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+alignIntronMin                    21
+alignIntronMax                    500000
+alignMatesGapMax                  1000000
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                5
+alignSJDBoverhangMin              1
+alignSJstitchMismatchNmax         0   -1   0   0   
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+alignEndsProtrude                 0   ConcordantPair   
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimMainSegmentMultNmax           10
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold   
+chimFilter                        banGenomicN   
+chimSegmentReadGapMax             0
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       genome/chr22_with_ERCC92.gtf
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         2
+sjdbInsertSave                    Basic
+quantMode                         GeneCounts   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       Basic
+----------------------------------------
+
+
+   Input read files for mate 1, from input string _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz
+-rw-rw-r-- 1 anjie-wilson anjie-wilson 26427691 11月 17 16:46 _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz
+
+   readsCommandsFile:
+exec > "_03_Align/hcc1395_normal_rep1/STAR__STARtmp/tmp.fifo.read1"
+echo FILE 0
+zcat      "_02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz"
+
+
+   Input read files for mate 2, from input string _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz
+-rw-rw-r-- 1 anjie-wilson anjie-wilson 30624398 11月 17 16:46 _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz
+
+   readsCommandsFile:
+exec > "_03_Align/hcc1395_normal_rep1/STAR__STARtmp/tmp.fifo.read2"
+echo FILE 0
+zcat      "_02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz"
+
+WARNING: --limitBAMsortRAM=0, will use genome size as RAM limit for BAM sorting
+Finished loading and checking parameters
+Reading genome generation parameters:
+versionGenome                 20201        ~RE-DEFINED
+genomeFastaFiles              chr22_with_ERCC92.fa        ~RE-DEFINED
+genomeSAindexNbases           14     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+sjdbOverhang                  0     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   -     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               74973184   323750892        ~RE-DEFINED
+Genome version is compatible with current STAR version
+Number of real (reference) chromosomes= 93
+1	22	50818468	0
+2	ERCC-00002	1061	50855936
+3	ERCC-00003	1023	51118080
+4	ERCC-00004	523	51380224
+5	ERCC-00009	984	51642368
+6	ERCC-00012	994	51904512
+7	ERCC-00013	808	52166656
+8	ERCC-00014	1957	52428800
+9	ERCC-00016	844	52690944
+10	ERCC-00017	1136	52953088
+11	ERCC-00019	644	53215232
+12	ERCC-00022	751	53477376
+13	ERCC-00024	536	53739520
+14	ERCC-00025	1994	54001664
+15	ERCC-00028	1130	54263808
+16	ERCC-00031	1138	54525952
+17	ERCC-00033	2022	54788096
+18	ERCC-00034	1019	55050240
+19	ERCC-00035	1130	55312384
+20	ERCC-00039	740	55574528
+21	ERCC-00040	744	55836672
+22	ERCC-00041	1122	56098816
+23	ERCC-00042	1023	56360960
+24	ERCC-00043	1023	56623104
+25	ERCC-00044	1156	56885248
+26	ERCC-00046	522	57147392
+27	ERCC-00048	992	57409536
+28	ERCC-00051	274	57671680
+29	ERCC-00053	1023	57933824
+30	ERCC-00054	274	58195968
+31	ERCC-00057	1021	58458112
+32	ERCC-00058	1136	58720256
+33	ERCC-00059	525	58982400
+34	ERCC-00060	523	59244544
+35	ERCC-00061	1136	59506688
+36	ERCC-00062	1023	59768832
+37	ERCC-00067	644	60030976
+38	ERCC-00069	1137	60293120
+39	ERCC-00071	642	60555264
+40	ERCC-00073	603	60817408
+41	ERCC-00074	522	61079552
+42	ERCC-00075	1023	61341696
+43	ERCC-00076	642	61603840
+44	ERCC-00077	273	61865984
+45	ERCC-00078	993	62128128
+46	ERCC-00079	644	62390272
+47	ERCC-00081	534	62652416
+48	ERCC-00083	1022	62914560
+49	ERCC-00084	994	63176704
+50	ERCC-00085	844	63438848
+51	ERCC-00086	1020	63700992
+52	ERCC-00092	1124	63963136
+53	ERCC-00095	521	64225280
+54	ERCC-00096	1107	64487424
+55	ERCC-00097	523	64749568
+56	ERCC-00098	1143	65011712
+57	ERCC-00099	1350	65273856
+58	ERCC-00104	2022	65536000
+59	ERCC-00108	1022	65798144
+60	ERCC-00109	536	66060288
+61	ERCC-00111	994	66322432
+62	ERCC-00112	1136	66584576
+63	ERCC-00113	840	66846720
+64	ERCC-00116	1991	67108864
+65	ERCC-00117	1136	67371008
+66	ERCC-00120	536	67633152
+67	ERCC-00123	1022	67895296
+68	ERCC-00126	1118	68157440
+69	ERCC-00130	1059	68419584
+70	ERCC-00131	771	68681728
+71	ERCC-00134	274	68943872
+72	ERCC-00136	1033	69206016
+73	ERCC-00137	537	69468160
+74	ERCC-00138	1024	69730304
+75	ERCC-00142	493	69992448
+76	ERCC-00143	784	70254592
+77	ERCC-00144	538	70516736
+78	ERCC-00145	1042	70778880
+79	ERCC-00147	1023	71041024
+80	ERCC-00148	494	71303168
+81	ERCC-00150	743	71565312
+82	ERCC-00154	537	71827456
+83	ERCC-00156	494	72089600
+84	ERCC-00157	1019	72351744
+85	ERCC-00158	1027	72613888
+86	ERCC-00160	743	72876032
+87	ERCC-00162	523	73138176
+88	ERCC-00163	543	73400320
+89	ERCC-00164	1022	73662464
+90	ERCC-00165	872	73924608
+91	ERCC-00168	1024	74186752
+92	ERCC-00170	1023	74448896
+93	ERCC-00171	505	74711040
+Started loading the genome: Sun Nov 19 06:53:15 2017
+
+Genome: size given as a parameter = 74973184
+SA: size given as a parameter = 323750892
+/SAindex: size given as a parameter = 1
+Read from SAindex: genomeSAindexNbases=14  nSAi=357913940
+nGenome=74973184;  nSAbyte=323750892
+GstrandBit=32   SA number of indices=78485064
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 74973184 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 74973184 bytes
+SA file size: 323750892 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 323750892 bytes
+Loading SAindex ... done: 1565873619 bytes
+Finished loading the genome: Sun Nov 19 06:53:16 2017
+
+To accomodate alignIntronMax=500000 redefined winBinNbits=18
+To accomodate alignIntronMax=500000 and alignMatesGapMax=1000000, redefined winFlankNbins=4 and winAnchorDistNbins=8
+Nov 19 06:53:16 ..... processing annotations GTF
+Processing sjdbGTFfile=genome/chr22_with_ERCC92.gtf, found:
+		4564 transcripts
+		26155 exons (non-collapsed)
+		7640 collapsed junctions
+Nov 19 06:53:16 ..... finished GTF processing
+Nov 19 06:53:16   Loaded database junctions from the GTF file: genome/chr22_with_ERCC92.gtf: 7640 total junctions
+
+Nov 19 06:53:16   Finished preparing junctions
+Nov 19 06:53:16 ..... inserting junctions into the genome indices
+Nov 19 06:53:19   Finished SA search: number of new junctions=7636, old junctions=0
+Nov 19 06:53:19   Finished sorting SA indicesL nInd=3054400
+Nov 19 06:53:20   Finished inserting junction indices
+Nov 19 06:53:25   Finished SAi
+Nov 19 06:53:25 ..... finished inserting junctions into genome
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate1.thread0 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate2.thread0 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate1.thread1 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate2.thread1 ... ok
+Created thread # 1
+Starting to map file # 0
+mate 1:   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz
+mate 2:   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz
+Thread #1 end of input stream, nextChar=-1
+Completed: thread #1
+Completed: thread #0
+Joined thread # 1
+Nov 19 06:53:48   Loaded database junctions from the 1st pass file: _03_Align/hcc1395_normal_rep1/STAR__STARpass1//SJ.out.tab: 12730 total junctions
+
+Nov 19 06:53:48   Finished preparing junctions
+Nov 19 06:53:48 ..... inserting junctions into the genome indices
+Nov 19 06:53:49   Finished SA search: number of new junctions=1227, old junctions=7636
+Nov 19 06:53:49   Finished sorting SA indicesL nInd=490800
+Nov 19 06:53:50   Finished inserting junction indices
+Nov 19 06:53:54   Finished SAi
+Nov 19 06:53:54 ..... finished inserting junctions into genome
+
+   Input read files for mate 1, from input string _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz
+-rw-rw-r-- 1 anjie-wilson anjie-wilson 26427691 11月 17 16:46 _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz
+
+   readsCommandsFile:
+exec > "_03_Align/hcc1395_normal_rep1/STAR__STARtmp/tmp.fifo.read1"
+echo FILE 0
+zcat      "_02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz"
+
+
+   Input read files for mate 2, from input string _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz
+-rw-rw-r-- 1 anjie-wilson anjie-wilson 30624398 11月 17 16:46 _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz
+
+   readsCommandsFile:
+exec > "_03_Align/hcc1395_normal_rep1/STAR__STARtmp/tmp.fifo.read2"
+echo FILE 0
+zcat      "_02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz"
+
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//Unmapped.out.mate1.thread0 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//Unmapped.out.mate2.thread0 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate1.thread0 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate2.thread0 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//Unmapped.out.mate1.thread1 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//Unmapped.out.mate2.thread1 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate1.thread1 ... ok
+Opening the file: _03_Align/hcc1395_normal_rep1/STAR__STARtmp//FilterBySJoutFiles.mate2.thread1 ... ok
+Created thread # 1
+Starting to map file # 0
+mate 1:   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r1_trimmed.fq.gz
+mate 2:   _02_QC/hcc1395_normal_rep1/cleanData/hcc1395_normal_rep1_r2_trimmed.fq.gz
+BAM sorting: 161486 mapped reads
+BAM sorting bins genomic start loci:
+1	0	22812035
+2	0	26540881
+3	0	31607105
+4	0	36314250
+5	0	37944004
+6	0	39314691
+7	0	41301665
+8	0	43983950
+Thread #1 end of input stream, nextChar=-1
+Completed: thread #1
+Completed: thread #0
+Joined thread # 1
+Completed stage 1 mapping of outFilterBySJout mapping
+Detected 4 novel junctions that passed filtering, will proceed to filter reads that contained unannotated junctions
+Created thread # 1
+Completed: thread #1
+Completed: thread #0
+Joined thread # 1
+Nov 19 06:54:19 ..... started sorting BAM
+Max memory needed for sorting = 27871399
+ALL DONE!

@@ -1,0 +1,12 @@
+PASS	Basic Statistics	hcc1395_normal_rep2_r2.fastq.gz
+PASS	Per base sequence quality	hcc1395_normal_rep2_r2.fastq.gz
+WARN	Per tile sequence quality	hcc1395_normal_rep2_r2.fastq.gz
+PASS	Per sequence quality scores	hcc1395_normal_rep2_r2.fastq.gz
+WARN	Per base sequence content	hcc1395_normal_rep2_r2.fastq.gz
+FAIL	Per sequence GC content	hcc1395_normal_rep2_r2.fastq.gz
+PASS	Per base N content	hcc1395_normal_rep2_r2.fastq.gz
+PASS	Sequence Length Distribution	hcc1395_normal_rep2_r2.fastq.gz
+WARN	Sequence Duplication Levels	hcc1395_normal_rep2_r2.fastq.gz
+WARN	Overrepresented sequences	hcc1395_normal_rep2_r2.fastq.gz
+FAIL	Adapter Content	hcc1395_normal_rep2_r2.fastq.gz
+FAIL	Kmer Content	hcc1395_normal_rep2_r2.fastq.gz
